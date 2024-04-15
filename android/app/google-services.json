@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "825498536545",
+    "project_id": "monify128",
+    "storage_bucket": "monify128.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:825498536545:android:2cb40c9b8414485489b820",
+        "android_client_info": {
+          "package_name": "com.example.monify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgpmh0xGp-h3NuFT5XBRSomP-HDb4Hfq4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
