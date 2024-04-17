@@ -38,11 +38,11 @@ class AuthNotifier extends StateNotifier<AuthState> {
   }
 
   Future<void> signUp(
-      String email, String password, BuildContext context) async {
+      String email, String password, BuildContext context, String name) async {
     showLoading(context);
     try {
       final res = await signUpUseCase
-          .call(SignUpParams(email: email, password: password));
+          .call(SignUpParams(email: email, password: password, name: name));
       state = AuthState.authenticated;
       UserPreferences.setUser(userId: res.user!.uid);
       if (context.mounted) context.router.replaceAll([const HomeRoute()]);

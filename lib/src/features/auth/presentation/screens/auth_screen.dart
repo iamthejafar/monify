@@ -22,6 +22,8 @@ class AuthScreen extends ConsumerStatefulWidget {
 class _AuthScreenState extends ConsumerState<AuthScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
+
   bool isSignIn = true;
   bool showPass = true;
   final formKey = GlobalKey<FormState>();
@@ -70,6 +72,18 @@ class _AuthScreenState extends ConsumerState<AuthScreen> {
                         style: textTheme.bodySmall,
                       ),
                       const Gap(10),
+                      if(!isSignIn)
+                        Column(
+                          children: [
+                            AppTextField(
+                              hintText: "Name",
+                              controller: _nameController,
+                              keyboardType: TextInputType.name,
+                              validator:  (value) => Validate.minLength(value: value!, minLen: 3),
+                            ),
+                            const Gap(10)
+                          ],
+                        ),
                       AppTextField(
                         hintText: "Email",
                         controller: _emailController,
@@ -110,7 +124,7 @@ class _AuthScreenState extends ConsumerState<AuthScreen> {
                               await ref.read(authProvider.notifier).signUp(
                                   _emailController.text.trim(),
                                   _passController.text.trim(),
-                              context);
+                              context, _nameController.text.trim());
                             }
                           }
                         },

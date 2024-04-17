@@ -29,7 +29,7 @@ class AppTextField extends StatelessWidget {
     this.showBorder = true,
     this.onSubmit,
     this.prefixIcon,
-    super.key,  this.obsecure = false, this.enabledBorder, this.disabledBorder, this.border,
+    super.key,  this.obsecure = false, this.enabledBorder, this.disabledBorder, this.border, this.focusNode,
   });
 
   final String? hintText;
@@ -53,6 +53,7 @@ class AppTextField extends StatelessWidget {
   final int? maxlines;
   final Function(String)? onChanged;
   final Function(String)? onSubmit;
+  final FocusNode? focusNode;
 
   final bool obsecure;
 
@@ -60,7 +61,8 @@ class AppTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return TextFormField(
-      style: textTheme.displayMedium!.copyWith(fontWeight: FontWeight.w600),
+      focusNode: focusNode,
+      style: textTheme.displayMedium!.copyWith(fontWeight: FontWeight.w500),
       obscureText: obsecure,
       onTap: onTap,
       onChanged: onChanged,

@@ -26,8 +26,12 @@ dependencies:
   gap: ^3.0.1
   equatable: ^2.0.5
   shared_preferences: ^2.2.3
-  get_it: ^7.6.9
+  get_it: ^7.7.0
   fl_chart: ^0.67.0
+  json_annotation: ^4.8.1
+  intl: ^0.19.0
+  cloud_firestore: ^4.16.1
+  animated_text_kit: ^4.2.2
 
 dev_dependencies:
   flutter_test:

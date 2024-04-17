@@ -19,7 +19,10 @@ class AppRouter extends $AppRouter {
   RouteType get defaultRouteType => const RouteType.adaptive();
   @override
   List<AutoRoute> get routes => [
+    AutoRoute(page: SplashRoute.page, path: "/splash", initial: true),
     AutoRoute(page: HomeRoute.page, path: "/home", ),
-    AutoRoute(page: AuthRoute.page, path: "/auth", initial: true)
+    AutoRoute(page: AuthRoute.page, path: "/auth", ),
+    AutoRoute(page: AddTransactionRoute.page, path: "/addTransaction"),
+    AutoRoute(page: NoInternetRoute.page, path: "/noInternet")
   ];
 }

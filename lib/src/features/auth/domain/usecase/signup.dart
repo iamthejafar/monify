@@ -14,7 +14,7 @@ class SignUpUseCase implements UseCase<dynamic,SignUpParams> {
 
   @override
   Future <UserCredential> call(SignUpParams params) async {
-    return await _repository.signUp(email: params.email, password: params.password);
+    return await _repository.signUp(email: params.email, password: params.password, name: params.name);
   }
 }
 
@@ -22,9 +22,10 @@ class SignUpUseCase implements UseCase<dynamic,SignUpParams> {
 class SignUpParams extends Equatable {
   String email;
   String password;
+  String name;
 
-  SignUpParams({required this.email,required this.password});
+  SignUpParams({required this.email,required this.password, required this.name});
 
   @override
-  List<Object?> get props => [email,password];
+  List<Object?> get props => [email,password,name];
 }

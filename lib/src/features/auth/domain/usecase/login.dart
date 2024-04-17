@@ -3,7 +3,6 @@ import 'package:equatable/equatable.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 
-import '../../../../comman/error/failures.dart';
 import '../../../../comman/usecases/usecase.dart';
 import '../repository/auth_repo.dart';
 

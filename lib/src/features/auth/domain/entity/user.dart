@@ -6,8 +6,11 @@ class UserEntity extends Equatable{
   final String about;
   final String name;
   final String email;
-  final String mobileNo;
   final String profilePicUrl;
+  final double totalBalance;
+  final double income;
+  final double expense;
+
 
 
   const UserEntity({
@@ -15,8 +18,10 @@ class UserEntity extends Equatable{
     required this.about,
     required this.name,
     required this.email,
-    required this.mobileNo,
-    required this.profilePicUrl
+    required this.profilePicUrl,
+    required this.totalBalance,
+    required this.income,
+    required this.expense,
   });
 
   @override
@@ -26,8 +31,10 @@ class UserEntity extends Equatable{
       about,
       name,
       email,
-      mobileNo,
-      profilePicUrl
+      profilePicUrl,
+      totalBalance,
+      income,
+      expense
     ];
   }
 }

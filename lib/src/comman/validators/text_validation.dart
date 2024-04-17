@@ -75,7 +75,7 @@ class Validate {
         return 'Not a valid format.';
       }
     } else {
-      return 'Field cannot be empty.';
+      return 'Field cannot be empty and should be number only.';
     }
   }
 
