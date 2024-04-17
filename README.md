@@ -1,16 +1,13 @@
 # monify
 
-A new Flutter project.
+## Testing Instructions
 
-## Getting Started
+- You will ne needed any andoid device above android version 5.0.
+- Simply dowload the application from the give link and install it.
+- You can just create new account for testing and proceed with further testing.
 
-This project is a starting point for a Flutter application.
+## About Projet
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Utilized Clean Architecture using riverpod for implementing this.
+- for routing and navigation used auto_route. for backend i have utilized firebae cloud databse and firebase_auth.
+- for caching used shared_preferences.
