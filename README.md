@@ -6,7 +6,7 @@
 - Simply download the application from the given link and install it.
 - You can just create new account for testing and proceed with further testing.
 
-## About Projet
+## About Assignment
 
 - Utilized Clean Architecture using riverpod for implementing this.
 - for routing and navigation used auto_route.
