@@ -28,14 +28,12 @@ class AppTheme {
         onSecondary: darkGrey,
         error: Colors.deepOrange,
         onError: white,
-        background: deepBlue,
-        onBackground: black,
         surface: lightBlue,
         onSurface: black,
       ),
       scaffoldBackgroundColor: white,
       splashColor: Colors.transparent,
-      textTheme: TextTheme(
+      textTheme: const TextTheme(
         displayLarge: TextStyle(
             fontSize: 20, fontWeight: FontWeight.w600, color: mediumBlue),
         displaySmall: TextStyle(
@@ -67,10 +65,10 @@ class AppTheme {
         labelSmall: TextStyle(
             color: mediumBlue, fontWeight: FontWeight.w400, fontSize: 12),
       ),
-      textButtonTheme: TextButtonThemeData(
+      textButtonTheme: const TextButtonThemeData(
           style: ButtonStyle(
-              foregroundColor: const MaterialStatePropertyAll(deepBlue),
-              textStyle: MaterialStatePropertyAll(
+              foregroundColor: WidgetStatePropertyAll(deepBlue),
+              textStyle: WidgetStatePropertyAll(
                   TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400
@@ -81,32 +79,32 @@ class AppTheme {
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
           enableFeedback: true,
-          backgroundColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.disabled)) {
+          backgroundColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.disabled)) {
               return null;
             } else {
               return lightBlue;
             }
           }),
-          elevation: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.disabled)) {
+          elevation: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.disabled)) {
               return 0;
             } else {
               return 1;
             }
           }),
-          foregroundColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.disabled)) {
+          foregroundColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.disabled)) {
               return darkGrey.withOpacity(0.5);
             } else {
               return mediumBlue;
             }
           }),
-          overlayColor: MaterialStatePropertyAll(white.withOpacity(0.3)),
-          minimumSize: MaterialStatePropertyAll(Size(double.infinity, 35)),
-          shape: MaterialStatePropertyAll(
+          overlayColor: WidgetStatePropertyAll(white.withOpacity(0.3)),
+          minimumSize: const WidgetStatePropertyAll(Size(double.infinity, 35)),
+          shape: WidgetStatePropertyAll(
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
-          textStyle: MaterialStatePropertyAll(TextStyle(fontSize: 14, fontWeight: FontWeight.w400)),
+          textStyle: const WidgetStatePropertyAll(TextStyle(fontSize: 14, fontWeight: FontWeight.w400)),
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
@@ -116,7 +114,7 @@ class AppTheme {
         border: textFieldBorder,
         enabledBorder: textFieldBorder,
         disabledBorder: textFieldBorder,
-        hintStyle: TextStyle(
+        hintStyle: const TextStyle(
           color: darkGrey,
           fontSize: 14,
           fontWeight: FontWeight.w400,
@@ -124,7 +122,7 @@ class AppTheme {
       ),
       iconButtonTheme: const IconButtonThemeData(
           style: ButtonStyle(
-              iconColor: MaterialStatePropertyAll(mediumBlue)
+              iconColor: WidgetStatePropertyAll(mediumBlue)
           )
       ),
       iconTheme: const IconThemeData(
