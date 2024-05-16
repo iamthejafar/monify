@@ -23,21 +23,21 @@ void showErrorDialog(BuildContext context, {required String message}) {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Gap(20),
+                  const Gap(20),
                   Text(
                     message,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: black,
                         fontWeight: FontWeight.w500,
                         fontSize: 14),
                   ),
-                  Gap(20),
+                  const Gap(20),
                   ElevatedButton(
                     onPressed: () {
-                      context.router.pop();
+                      context.router.maybePop();
                     },
-                    child: Text(
+                    child: const Text(
                       'Ok',
                       style: TextStyle(
                           color: black,
@@ -45,7 +45,7 @@ void showErrorDialog(BuildContext context, {required String message}) {
                           fontWeight: FontWeight.w500),
                     ),
                   ),
-                  Gap(20),
+                  const Gap(20),
                 ],
               ),
             )),

@@ -71,9 +71,9 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
             SliverAppBar(
                 title: const Text("Add Transaction"),
                 bottom: TabBar(
-                  labelPadding: EdgeInsets.only(top: 10),
+                  labelPadding: const EdgeInsets.only(top: 10),
                   indicatorWeight: 5,
-                  indicator: BoxDecoration(
+                  indicator: const BoxDecoration(
                       color: pale,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(10),
@@ -110,7 +110,7 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
                         "Add ${_isExpense ? "Expense" : "Income"}",
                         style: textTheme.displayLarge,
                       ),
-                      Gap(10),
+                      const Gap(10),
                       AppTextField(
                         hintText: 'Transaction name',
                         focusNode: _nameFocus,
@@ -143,7 +143,7 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
 
                           final DateTime? date = await showDatePicker(
                             context: context,
-                            currentDate: _isExpense != null ? _date : null,
+                            currentDate: _isExpense ? _date : null,
                             firstDate: now.subtract(const Duration(days: 30)),
                             lastDate: now,
                           );
